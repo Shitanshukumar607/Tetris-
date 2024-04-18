@@ -12,10 +12,10 @@ export function SquareAppear(alldivspara, currentIndexpara) {
 
     console.log(currentIndexpara)
     setTimeout(() =>
-        SquareMove(alldivspara, currentIndexpara), 400)
+        SquareMove(alldivspara, currentIndexpara), 500)
 }
 
- 
+
 // makes the square go down .
 // here in this function we first remove all the blue class from its current position and give class blue to the next position 
 function SquareMove(alldivspara, currentIndexpara) {
@@ -45,10 +45,13 @@ function SquareMove(alldivspara, currentIndexpara) {
             alldivspara[currentIndexpara[i]].classList.add("placed")
 
         }
-        currentIndexpara = [] 
-        
+        currentIndexpara = []
+        setTimeout(() => {
+            SquareAppear(alldivspara, currentIndexpara)
+        }, 300)
+
     } else {
-        setTimeout(SquareMove, 100)
+        setTimeout(SquareMove(alldivspara, currentIndexpara), 300)
     }
 
 

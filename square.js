@@ -32,7 +32,7 @@ function SquareMove(alldivspara, currentIndexpara) {
     console.log(currentIndexpara)
 
 
-    if (currentIndexpara.length === 2) {
+    if (currentIndexpara.length == 2) {
         alldivspara[7].classList.add("blue")
         alldivspara[8].classList.add("blue")
         currentIndexpara.push(7, 8)

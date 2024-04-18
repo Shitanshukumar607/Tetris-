@@ -45,8 +45,9 @@ function SquareMove(alldivspara, currentIndexpara) {
             alldivspara[currentIndexpara[i]].classList.add("placed")
 
         }
-        currentIndexpara = []
+        
         setTimeout(() => {
+            currentIndexpara = []
             SquareAppear(alldivspara, currentIndexpara)
         }, 300)
 
